@@ -1,9 +1,9 @@
-import KBadge from "./components/KBadge.vue";
+import KBadge from './components/KBadge.vue'
 
-const version = __UI_VERSION__;
+const version = __UI_VERSION__
 
 function install(app) {
-  app.component("KBadge", KBadge);
+  app.component('KBadge', KBadge)
 }
 
-export { version, KBadge, install };
+export { version, KBadge, install }

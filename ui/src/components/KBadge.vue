@@ -3,17 +3,17 @@
 </template>
 
 <script>
-import { QBadge } from "quasar";
+import { QBadge } from 'quasar'
 export default {
+  components: {
+    QBadge,
+  },
+
   props: {
     label: {
       type: String,
       required: true,
     },
   },
-
-  components: {
-    QBadge,
-  },
-};
+}
 </script>
