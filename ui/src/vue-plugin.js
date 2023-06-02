@@ -1,9 +1,9 @@
-import BaseBadge from "./components/BaseBadge.vue";
+import KBadge from "./components/KBadge.vue";
 
 const version = __UI_VERSION__;
 
 function install(app) {
-  app.component("BaseBadge", BaseBadge);
+  app.component("KBadge", KBadge);
 }
 
-export { version, BaseBadge, install };
+export { version, KBadge, install };

@@ -76,7 +76,7 @@ export default {
 
 ## UMD variant
 
-Exports `window.fistDash`.
+Exports `window.firstDash`.
 
 Add the following tag(s) after the Quasar ones:
 
