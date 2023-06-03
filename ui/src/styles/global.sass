@@ -39,6 +39,10 @@ pre
   .column-gap-#{$spacing-size}
     column-gap: $distance
 
+@each $radius-name, $radius-size in $radius-size-map
+  .rounded-#{$radius-name}
+    border-radius: $radius-size
+
 @each $bereakpoint in $breakpoints
   @each $spacing-size, $distance in $spacing-size-map
     @include bp-class-gen(gap, $bereakpoint, $spacing-size)
@@ -47,6 +51,9 @@ pre
       row-gap: $distance
     @include bp-class-gen(column-gap, $bereakpoint, $spacing-size)
       column-gap: $distance
+  @each $radius-name, $radius-size in $radius-size-map
+    @include bp-class-gen(rounded, $bereakpoint, $radius-name)
+      border-radius: $radius-size
 
 @each $font-weight in $font-weight-list
   .fw-#{$font-weight}
@@ -83,14 +90,14 @@ pre
   max-width: 1512px
   margin-right: auto
   margin-left: auto
-  padding-right: map-get($space-md, 'x')
-  padding-left: map-get($space-md, 'x')
+  padding-right: map-get($spacing-size-map, '16')
+  padding-left: map-get($spacing-size-map, '16')
   @include at-gt-md
-    padding-right: map-get($space-64, 'x')
-    padding-left: map-get($space-64, 'x')
+    padding-right: map-get($spacing-size-map, '48')
+    padding-left: map-get($spacing-size-map, '48')
   @include at-gt-lg
-    padding-right: map-get($space-72, 'x')
-    padding-left: map-get($space-72, 'x')
+    padding-right: map-get($spacing-size-map, '72')
+    padding-left: map-get($spacing-size-map, '72')
 
 .custom-scrollbar
   @include custom-scrollbar

@@ -1,5 +1,5 @@
 <template>
-  <q-badge class="bg-extra-deep-mb q-my-40" :label="label" />
+  <q-badge class="bg-extra-deep-mb" :label="label" />
 </template>
 
 <script>
