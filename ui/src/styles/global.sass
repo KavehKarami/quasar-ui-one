@@ -1,0 +1,96 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Overwrite                                 */
+/* -------------------------------------------------------------------------- */
+body
+  font-family: 'Poppins', sans-serif
+  // background-color: $light
+  // color: $dark
+
+pre
+  font-family: 'Poppins', sans-serif
+
+*
+  line-height: 150% !important
+
+/* -------------------------------------------------------------------------- */
+/*                                   Classes                                  */
+/* -------------------------------------------------------------------------- */
+@each $color-name, $color in $palette-map
+  .text-#{$color-name}
+    color: $color !important
+  .bg-#{$color-name}
+    background-color: $color !important
+  .svg-icon--#{$color-name}
+    *
+      fill: $color
+    svg
+      fill: $color
+  .svg-icon--stroke-#{$color-name}
+    *
+      stroke: $color
+    svg
+      stroke: $color
+
+@each $spacing-size, $distance in $spacing-size-map
+  .gap-#{$spacing-size}
+    gap: $distance
+  .row-gap-#{$spacing-size}
+    row-gap: $distance
+  .column-gap-#{$spacing-size}
+    column-gap: $distance
+
+@each $bereakpoint in $breakpoints
+  @each $spacing-size, $distance in $spacing-size-map
+    @include bp-class-gen(gap, $bereakpoint, $spacing-size)
+      gap: $distance
+    @include bp-class-gen(row-gap, $bereakpoint, $spacing-size)
+      row-gap: $distance
+    @include bp-class-gen(column-gap, $bereakpoint, $spacing-size)
+      column-gap: $distance
+
+@each $font-weight in $font-weight-list
+  .fw-#{$font-weight}
+    font-weight: $font-weight
+
+@each $font-size in $font-size-list
+  .fs-#{$font-size}
+    font-size: $font-size
+
+@each $bereakpoint in $breakpoints
+  @each $font-size in $font-size-list
+    @include bp-class-gen(fs, $bereakpoint, $font-size)
+      font-size: $font-size
+
+.flex-1
+  flex: 1
+
+.high-zIndex
+  z-index: 999999999
+
+.text-decoration-none
+  text-decoration: none
+
+.list-style-type-none
+  list-style-type: none
+.list-style-position-inside
+  list-style-position: inside
+
+.transition
+  transition: 0.3s ease
+
+.container
+  width: 100%
+  max-width: 1512px
+  margin-right: auto
+  margin-left: auto
+  padding-right: map-get($space-md, 'x')
+  padding-left: map-get($space-md, 'x')
+  @include at-gt-md
+    padding-right: map-get($space-64, 'x')
+    padding-left: map-get($space-64, 'x')
+  @include at-gt-lg
+    padding-right: map-get($space-72, 'x')
+    padding-left: map-get($space-72, 'x')
+
+.custom-scrollbar
+  @include custom-scrollbar

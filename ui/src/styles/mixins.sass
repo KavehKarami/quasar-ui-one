@@ -1,0 +1,110 @@
+/* -------------------------------------------------------------------------- */
+/*                                 BEM Helpers                                */
+/* -------------------------------------------------------------------------- */
+@mixin --modifier($modifier)
+  $parent: &
+  &--#{"" + $modifier}
+    @extend #{$parent}
+    @content
+
+@mixin __element($element)
+  &__#{"" + $element}
+    @content
+
+@mixin --state-modifier($modifier)
+  &--#{"" + $modifier}
+    @content
+
+/* -------------------------------------------------------------------------- */
+/*                                 Breakpoints                                */
+/* -------------------------------------------------------------------------- */
+
+/* --------------------------- media query mixins --------------------------- */
+// xs  :   small phone:        x <360px
+// sm  :   phone:              x <= 599px
+// md  :   tablet portrait:    600px < x <= 1023px
+// lg  :   tablet landscape:   1024px < x <= 1439px
+// xl  :   desktop:            1440px < x <= 1919px
+// xxl :   wide screen:        1920px <= x
+/* -------------------------------------------------------------------------- */
+@mixin at-xs
+  @media only screen and (max-width: $bp_small_mobile_upper)
+    @content
+
+@mixin at-sm
+  @media only screen and (max-width: $bp_mobile_upper)
+    @content
+
+@mixin at-md
+  @media only screen and (min-width: $bp_mobile_upper) and (max-width: $bp_tabletp_upper + 1)
+    @content
+
+@mixin at-lg
+  @media only screen and (min-width: $bp_tabletp_upper) and (max-width: $bp_tabletl_upper + 1)
+    @content
+
+@mixin at-xl
+  @media only screen and (min-width: $bp_tabletl_upper) and (max-width: $bp_wide_lower + 1)
+    @content
+
+@mixin at-xxl
+  @media only screen and (min-width: $bp_wide_lower)
+    @content
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                             media query mixins                             */
+/* -------------------------------------------------------------------------- */
+// md  :   tablet portrait:    1024px < x
+// lg  :   tablet landscape:   1440px < x
+// xl  :   desktop:            1920px < x
+/* -------------------------------------------------------------------------- */
+@mixin at-gt-md
+  @media only screen and (min-width: $bp_tabletp_upper + 1)
+    @content
+
+@mixin at-gt-lg
+  @media only screen and (min-width: $bp_tabletl_upper + 1)
+    @content
+
+@mixin at-gt-xl
+  @media only screen and (min-width: $bp_wide_lower + 1)
+    @content
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                         Breakpoints Class Generator                        */
+/* -------------------------------------------------------------------------- */
+@mixin bp-class-gen($constant, $breakpoints, $variable)
+  .#{"" + $constant}-#{"" + $breakpoints}-#{"" + $variable}
+    @if($breakpoints == 'xs')
+      @include at-xs
+        @content
+    @if($breakpoints == 'sm')
+      @include at-sm
+        @content
+    @if($breakpoints == 'md')
+      @include at-gt-md
+        @content
+    @if($breakpoints == 'lg')
+      @include at-gt-lg
+        @content
+    @if($breakpoints == 'xl')
+      @include at-gt-xl
+        @content
+/* -------------------------------------------------------------------------- */
+
+@mixin custom-scrollbar
+  &::-webkit-scrollbar
+    -webkit-appearance: none
+
+  &::-webkit-scrollbar:vertical
+    width: 7px
+
+  &::-webkit-scrollbar:horizontal
+    height: 7px
+
+  &::-webkit-scrollbar-thumb
+    background-color: $gray
+    border-radius: 10px !important
+    border: 2px solid $white

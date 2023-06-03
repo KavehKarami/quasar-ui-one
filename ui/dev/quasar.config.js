@@ -26,6 +26,7 @@ module.exports = function (ctx) {
     ],
 
     framework: {
+      cssAddon: true,
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
 

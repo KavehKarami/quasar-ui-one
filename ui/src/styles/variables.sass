@@ -1,0 +1,87 @@
+$transparent: transparent
+
+/* -------------------------------------------------------------------------- */
+/*                               Primary Colour                               */
+/* -------------------------------------------------------------------------- */
+$extra-deep-mb: #06182E
+$deep-mb1: #00326C
+$deep-mb2: #2A66BE
+$midnight-blue: #2D72F1
+$light-mb: #66ACFF
+$extra-light-mb: #DCECFF
+
+/* -------------------------------------------------------------------------- */
+/*                              Secondary Colour                              */
+/* -------------------------------------------------------------------------- */
+$deep-ab1: #004F7B
+$deep-ab2: #0086BF
+$aqua-blue: #00C2FF
+$light-ab: #5FD9FF
+$mid-light-ab: #C0EEFD
+$extra-light-ab: #EDFCFF
+
+/* -------------------------------------------------------------------------- */
+/*                                 Base Colour                                */
+/* -------------------------------------------------------------------------- */
+$black: #000000
+$extra-deep-gray: #424448
+$deep-gray: #858C92
+$gray: #B9C0C4
+$light-gray: #DCE0E3
+$extra-light-gray: #F6F7F9
+$extra-deep-bg: #3D4C5A
+$deep-bg: #6A7B8B
+$blue-gray: #ACB9C5
+$light-bg: #E1E8EE
+$extra-light-bg: #F0F3F8
+$white: #ffffff
+
+/* -------------------------------------------------------------------------- */
+/*                                Accent Colour                               */
+/* -------------------------------------------------------------------------- */
+$error100: #FD6363
+$error80: #FFB7B7
+$error60: #FFE9E9
+$error20: #FFF6F6
+
+$deep-eb1: #00C1DB
+$electric-blue: #00C1DB
+$light-eb: #81F0FF
+$extra-light-eb: #D9FDFF
+
+$deep-sg: #B0E000
+$spring-green: #CCFB23
+$light-sg: #EDFFAE
+$extra-light-sg: #F8FFDF
+
+$palette-map: ('transparent': $transparent, 'extra-deep-mb': $extra-deep-mb, 'deep-mb1': $deep-mb1, 'deep-mb2': $deep-mb2, 'midnight-blue': $midnight-blue, 'light-mb': $light-mb, 'extra-light-mb': $extra-light-mb, 'deep-ab1': $deep-ab1, 'deep-ab2': $deep-ab2, 'aqua-blue': $aqua-blue, 'light-ab': $light-ab, 'mid-light-ab': $mid-light-ab, 'extra-light-ab': $extra-light-ab, 'black': $black, 'extra-deep-gray': $extra-deep-gray, 'deep-gray': $deep-gray, 'gray': $gray, 'light-gray': $light-gray, 'extra-light-gray': $extra-light-gray, 'extra-deep-bg': $extra-deep-bg, 'deep-bg': $deep-bg, 'blue-gray': $blue-gray, 'light-bg': $light-bg, 'extra-light-bg': $extra-light-bg, 'white': $white, 'error100': $error100, 'error80': $error80, 'error60': $error60, 'error20': $error20, 'deep-eb1': $deep-eb1, 'electric-blue': $electric-blue, 'light-eb': $light-eb, 'extra-light-eb': $extra-light-eb, 'deep-sg': $deep-sg, 'spring-green': $spring-green, 'light-sg': $light-sg, 'extra-light-sg': $extra-light-sg)
+
+$spacing-size-map: ('auto': auto, 'none': 0, 'xs': 4px, 'sm': 8px, 'md': 16px, 'lg': 24px, 'xl': 32px, '40': 40px, '48': 48px, '56': 56px, '64': 64px, '72': 72px)
+
+$space-none: (x: 0, y: 0)
+$space-xs: (x: ($space-x-base * .25), y: ($space-y-base * .25)) // 4px
+$space-sm: (x: ($space-x-base * .5), y: ($space-y-base * .5)) // 8px
+$space-md: (x: $space-x-base, y: $space-y-base) // 16px
+$space-lg: (x: ($space-x-base * 1.5), y: ($space-y-base * 1.5)) // 24px
+$space-xl: (x: ($space-x-base * 2), y: ($space-y-base * 2)) // 32px
+$space-40: (x: ($space-x-base * 2.5), y: ($space-y-base * 2.5)) // 40px
+$space-48: (x: ($space-x-base * 3), y: ($space-y-base * 3)) // 48px
+$space-56: (x: ($space-x-base * 3.5), y: ($space-y-base * 3.5)) // 56px
+$space-64: (x: ($space-x-base * 4), y: ($space-y-base * 4)) // 64px
+$space-72: (x: ($space-x-base * 4.5), y: ($space-y-base * 4.5)) // 72px
+
+$spaces: ('none': $space-none, 'xs': $space-xs, 'sm': $space-sm, 'md': $space-md, 'lg': $space-lg, 'xl': $space-xl, '40': $space-40, '48': $space-48, '56': $space-56, '64': $space-64, '72': $space-72)
+
+/* -------------------------------------------------------------------------- */
+
+/* ---- quasar breakpoints --> ref: https://quasar.dev/style/breakpoints ---- */
+$bp_small_mobile_upper: 360px
+$bp_mobile_upper: 599px
+$bp_tabletp_upper: 1023px
+$bp_tabletl_upper: 1439px
+$bp_wide_lower: 1919px
+
+$breakpoints: 'xs' 'sm' 'md' 'lg' 'xl'
+
+$font-weight-list: normal 100 200 300 400 500 600 700 800 900
+$font-size-list: 10px 12px 13px 14px 15px 16px 17px 18px 20px 22px 24px 25px 26px 28px 32px 34px 36px 38px 40px 42px 44px 46px 48px 54px 58px
