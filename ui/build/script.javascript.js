@@ -5,14 +5,13 @@ const rollup = require('rollup')
 const uglify = require('uglify-js')
 const buble = require('@rollup/plugin-buble')
 const json = require('@rollup/plugin-json')
-const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const replace = require('@rollup/plugin-replace')
-const vuePlugin = require('rollup-plugin-vue')
-
-const { version } = require('../package.json')
-
+const vue = require('rollup-plugin-vue')
+const postcss = require('rollup-plugin-postcss')
+const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const buildConf = require('./config')
 const buildUtils = require('./utils')
+const { version } = require('../package.json')
 
 const rollupPlugins = [
   replace({
@@ -26,7 +25,10 @@ const rollupPlugins = [
     preferBuiltins: false,
   }),
   json(),
-  vuePlugin(),
+  vue({
+    preprocessStyles: true,
+  }),
+  postcss(),
   buble({
     objectAssign: 'Object.assign',
   }),
