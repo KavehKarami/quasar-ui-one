@@ -1,6 +1,6 @@
 {
   "name": "quasar-ui-1st-dash",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Kaveh Karami <Kaveh.Karami.KK@gmail.com>",
   "description": "1st dash ui kit",
   "license": "MIT",
@@ -44,6 +44,7 @@
     "quasar": "^2.0.0",
     "rimraf": "^3.0.0",
     "rollup": "^2.45.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-vue": "^6.0.0",
     "rtlcss": "^2.6.1",
     "sass": "1.32.0",
