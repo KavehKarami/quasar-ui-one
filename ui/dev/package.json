@@ -5,8 +5,8 @@
   "productName": "Quasar App",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
-    "dev:ssr": "quasar dev -m ssr",
+    "dev": "quasar dev -m ssr",
+    "dev:spa": "quasar dev",
     "dev:ios": "quasar dev -m ios",
     "dev:android": "quasar dev -m android",
     "dev:electron": "quasar dev -m electron"
