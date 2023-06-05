@@ -19,7 +19,13 @@
 </template>
 
 <script>
-import { defineComponent, ref, shallowRef, computed, watch } from 'vue'
+import {
+  defineComponent,
+  defineAsyncComponent,
+  ref,
+  shallowRef,
+  watch,
+} from 'vue'
 
 export default defineComponent({
   name: 'BaseIcon',
@@ -39,13 +45,10 @@ export default defineComponent({
     const strokeRef = ref('')
     const colorRef = ref('')
 
-    const importer = () => import(`../svg/${props.name}.vue`)
-    const loader = computed(() => importer)
-
     const loadComponent = () => {
-      loader.value().then((res) => {
-        myComponent.value = res.default
-      })
+      myComponent.value = defineAsyncComponent(() =>
+        import(`../static/svg/${props.name}.vue`)
+      )
     }
 
     watch(
