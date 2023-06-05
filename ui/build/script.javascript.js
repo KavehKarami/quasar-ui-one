@@ -131,10 +131,16 @@ function addAssets(builds, type, injectName) {
     })
 }
 
+function copyStaticFiles() {
+  const srcPath = pathResolve('../src/static')
+  const destPath = pathResolve('../static')
+  fse.copySync(srcPath, destPath)
+}
+
 function build(builds) {
-  return Promise.all(builds.map(genConfig).map(buildEntry)).catch(
-    buildUtils.logError
-  )
+  return Promise.all(builds.map(genConfig).map(buildEntry))
+    .then(copyStaticFiles)
+    .catch(buildUtils.logError)
 }
 
 function genConfig(opts) {
