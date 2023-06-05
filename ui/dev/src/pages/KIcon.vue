@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <KIcon name="bag" size="50px" />
+    <k-icon name="bag" size="50px" />
   </q-page>
 </template>
 

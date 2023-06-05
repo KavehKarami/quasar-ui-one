@@ -28,7 +28,7 @@ import {
 } from 'vue'
 
 export default defineComponent({
-  name: 'BaseIcon',
+  name: 'KIcon',
 
   props: {
     name: { type: String, required: true },
@@ -68,6 +68,7 @@ export default defineComponent({
       () => (colorRef.value = props.color),
       { immediate: true }
     )
+
     watch(
       () => props.stroke,
       () => (strokeRef.value = props.stroke),

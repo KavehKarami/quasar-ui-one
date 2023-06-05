@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <KBadge label="badge" />
+    <k-badge label="badge" />
   </q-page>
 </template>
 
