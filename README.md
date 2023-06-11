@@ -1,7 +1,7 @@
 # Component MyComponent
 
-[![npm](https://img.shields.io/npm/v/quasar-ui-1st-dash.svg?label=quasar-ui-1st-dash)](https://www.npmjs.com/package/quasar-ui-1st-dash)
-[![npm](https://img.shields.io/npm/dt/quasar-ui-1st-dash.svg)](https://www.npmjs.com/package/quasar-ui-1st-dash)
+[![npm](https://img.shields.io/npm/v/quasar-ui-one.svg?label=quasar-ui-one)](https://www.npmjs.com/package/quasar-ui-one)
+[![npm](https://img.shields.io/npm/dt/quasar-ui-one.svg)](https://www.npmjs.com/package/quasar-ui-one)
 
 **Compatible with Quasar UI v2 and Vue 3**.
 
@@ -20,8 +20,8 @@ Create and register a boot file:
 
 ```js
 import Vue from 'vue'
-import Plugin from 'quasar-ui-1st-dash'
-import 'quasar-ui-1st-dash/dist/index.css'
+import Plugin from 'quasar-ui-one'
+import 'quasar-ui-one/dist/index.css'
 
 Vue.use(Plugin)
 ```
@@ -29,10 +29,10 @@ Vue.use(Plugin)
 **OR**:
 
 ```html
-<style src="quasar-ui-1st-dash/dist/index.css"></style>
+<style src="quasar-ui-one/dist/index.css"></style>
 
 <script>
-import { Component as MyComponent } from 'quasar-ui-1st-dash'
+import { Component as MyComponent } from 'quasar-ui-one'
 
 export default {
   
@@ -49,8 +49,8 @@ export default {
 
 ```js
 import Vue from 'vue'
-import Plugin from 'quasar-ui-1st-dash'
-import 'quasar-ui-1st-dash/dist/index.css'
+import Plugin from 'quasar-ui-one'
+import 'quasar-ui-one/dist/index.css'
 
 Vue.use(Plugin)
 ```
@@ -58,10 +58,10 @@ Vue.use(Plugin)
 **OR**:
 
 ```html
-<style src="quasar-ui-1st-dash/dist/index.css"></style>
+<style src="quasar-ui-one/dist/index.css"></style>
 
 <script>
-import { Component as MyComponent } from 'quasar-ui-1st-dash'
+import { Component as MyComponent } from 'quasar-ui-one'
 
 export default {
   
@@ -83,16 +83,16 @@ Add the following tag(s) after the Quasar ones:
 ```html
 <head>
   <!-- AFTER the Quasar stylesheet tags: -->
-  <link href="https://cdn.jsdelivr.net/npm/quasar-ui-1st-dash/dist/index.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/quasar-ui-one/dist/index.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <!-- at end of body, AFTER Quasar script(s): -->
-  <script src="https://cdn.jsdelivr.net/npm/quasar-ui-1st-dash/dist/index.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar-ui-one/dist/index.umd.min.js"></script>
 </body>
 ```
 If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
 ```html
-<link href="https://cdn.jsdelivr.net/npm/quasar-ui-1st-dash/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/quasar-ui-one/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
 ```
 
 # Setup

@@ -1,6 +1,6 @@
 {
-  "name": "quasar-ui-1st-dash",
-  "version": "0.1.2",
+  "name": "quasar-ui-one",
+  "version": "0.1.3",
   "author": "Kaveh Karami <Kaveh.Karami.KK@gmail.com>",
   "description": "1st dash ui kit",
   "license": "MIT",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KavehKarami/quasar-ui-1st-dash"
+    "url": "https://github.com/KavehKarami/quasar-ui-one"
   },
   "bugs": "",
   "homepage": "",
