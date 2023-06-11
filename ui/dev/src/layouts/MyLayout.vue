@@ -4,7 +4,7 @@
       <q-toolbar>
         <q-btn flat dense round to="/" icon="home" />
 
-        <q-toolbar-title> quasar-ui-one v{{ version }} </q-toolbar-title>
+        <q-toolbar-title> quasar-ui-app-pair v{{ version }} </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>

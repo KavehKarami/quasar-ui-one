@@ -1,6 +1,6 @@
 {
-  "name": "quasar-ui-one",
-  "version": "0.1.3",
+  "name": "quasar-ui-app-pair",
+  "version": "0.1.4",
   "author": "Kaveh Karami <Kaveh.Karami.KK@gmail.com>",
   "description": "1st dash ui kit",
   "license": "MIT",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KavehKarami/quasar-ui-one"
+    "url": "https://gitlab.com/apppair/apppair.uikit"
   },
   "bugs": "",
   "homepage": "",
